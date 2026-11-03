@@ -6,7 +6,9 @@ Este proyecto resuelve analíticamente una ecuación diferencial separable y com
 
 Se selecciona el problema de valor inicial:
 
-$$\frac{dy}{dt}=y, \qquad y(0)=1.$$
+$$
+\frac{dy}{dt}=y, \qquad y(0)=1.
+$$
 
 La ecuación describe un crecimiento cuya rapidez es proporcional al valor de la función, con constante de proporcionalidad igual a 1. La condición inicial permite determinar una solución particular única.
 
@@ -14,23 +16,33 @@ La ecuación describe un crecimiento cuya rapidez es proporcional al valor de la
 
 Para las soluciones no nulas, se separan las variables:
 
-$$\frac{1}{y}\,dy=dt.$$
+$$
+\frac{1}{y}\,dy=dt.
+$$
 
 Se integran ambos lados:
 
-$$\int\frac{1}{y}\,dy=\int dt \quad\Rightarrow\quad \ln|y|=t+C.$$
+$$
+\int\frac{1}{y}\,dy=\int dt \quad\Rightarrow\quad \ln|y|=t+C.
+$$
 
 Al aplicar la función exponencial y absorber el signo y la constante en A:
 
-$$y(t)=Ae^t.$$
+$$
+y(t)=Ae^t.
+$$
 
 Se sustituye la condición inicial:
 
-$$y(0)=Ae^0=1 \quad\Rightarrow\quad A=1.$$
+$$
+y(0)=Ae^0=1 \quad\Rightarrow\quad A=1.
+$$
 
 Por lo tanto, la solución exacta del problema es:
 
-$$\boxed{y(t)=e^t}.$$
+$$
+\boxed{y(t)=e^t}.
+$$
 
 Comprobación: su derivada es e^t = y(t), y en t=0 vale 1. Al dividir entre y se excluyó la solución de equilibrio y=0; esta también resuelve la ecuación diferencial, pero no cumple la condición inicial elegida.
 
@@ -38,11 +50,15 @@ Comprobación: su derivada es e^t = y(t), y en t=0 vale 1. Al dividir entre y se
 
 Para una ecuación de la forma y' = f(t,y), Euler explícito utiliza la pendiente al inicio de cada paso:
 
-$$t_{n+1}=t_n+h, \qquad y_{n+1}=y_n+h f(t_n,y_n).$$
+$$
+t_{n+1}=t_n+h, \qquad y_{n+1}=y_n+h f(t_n,y_n).
+$$
 
 En este problema, f(t,y)=y y h=0.2, de modo que:
 
-$$y_{n+1}=y_n+0.2y_n=1.2y_n.$$
+$$
+y_{n+1}=y_n+0.2y_n=1.2y_n.
+$$
 
 El número de pasos es N=(1−0)/0.2=5. Se obtienen seis puntos al incluir el inicial. Por ejemplo, el primer paso es y₁=1+0.2(1)=1.2, y el segundo es y₂=1.2+0.2(1.2)=1.44.
 
